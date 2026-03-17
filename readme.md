@@ -14,9 +14,12 @@ Everything here is a learning journey, so expect simple, clean, and commented co
 ├── 2_variables
 │   ├── main
 │   └── main.cpp
+├── 3_maths
+│   ├── main
+│   └── main.cpp
 └── readme_tree.txt
+4 directories, 7 files
 
-3 directories, 5 files
 ````
 ---
 
