@@ -12,7 +12,7 @@ int main() {
     int subNum2 = 4;
     int subResult = subNum1 - subNum2;
     std::cout << subResult << " Subtraction" << std::endl;
-
+    
     // 3 Multiplication
     int mulNum1 = 6;
     int mulNum2 = 3;
@@ -45,8 +45,26 @@ int main() {
     int simpleNum = 10;
     simpleNum = simpleNum + 5;
     std::cout << simpleNum << " more simple method" << std::endl;
+
+    // 6 Increment Operators
+    // 6.a Post-Increment
+    // Post-increment uses the current value first, then increases it by 1
+    int postIncrNum1 = 10;
+    int postIncrNum2 = postIncrNum1++;
+    std::cout << postIncrNum2 << " Post-Increment (postIncrNum2 = postIncrNum1++)" << std::endl;
+    std::cout << postIncrNum1 << " postIncrNum1 after post-increment" << std::endl;
+
+    // 6.b Pre-Increment
+    // Pre-increment increases the value first, then uses it
+    int preIncrNum1 = 20;
+    int preIncrNum2 = ++preIncrNum1;
+    std::cout << preIncrNum2 << " Pre-Increment (preIncrNum2 = ++preIncrNum1)" << std::endl;
+    std::cout << preIncrNum1 << " preIncrNum1 after pre-increment" << std::endl;
+
+
 }
 
+// Note:
 
 // you can also just type in numbers like int divResult 6 / 3;
 // i used variables because in a real programm you dont use hardcoded numbers!

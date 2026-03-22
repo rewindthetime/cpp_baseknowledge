@@ -8,17 +8,23 @@ Everything here is a learning journey, so expect simple, clean, and commented co
 
 ## 📂 Project Structure
 ````
+.
 ├── 1_printing_out
-│   ├── main2.cpp
-│   └── main.cpp
+│   ├── main2.cpp
+│   └── main.cpp
 ├── 2_variables
-│   ├── main
-│   └── main.cpp
+│   ├── main
+│   └── main.cpp
 ├── 3_maths
-│   ├── main
-│   └── main.cpp
-└── readme_tree.txt
-4 directories, 7 files
+│   ├── main
+│   └── main.cpp
+├── 4_input
+│   ├── main
+│   └── main.cpp
+├── 5_cmath
+│   └── main.cpp
+└── readme.md
+
 
 ````
 ---
