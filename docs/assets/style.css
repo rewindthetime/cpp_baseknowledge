@@ -1,0 +1,384 @@
+/* Modern Dark Theme with JetBrains Mono Nerd Font */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Roboto', monospace;
+    background: #0a0a0a;
+    color: #e5e5e5;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #00d4ff, #007acc, #005999);
+    z-index: 1000;
+    transition: width 0.1s ease;
+}
+
+header {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    padding: 100px 0 80px;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .container {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    padding: 100px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #007acc);
+    border-radius: 1px;
+}
+
+.preface p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    line-height: 1.7;
+    color: #c0c0c0;
+}
+
+.chapters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.chapter {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.chapter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.chapter:hover::before {
+    left: 100%;
+}
+
+.chapter:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.1);
+}
+
+.chapter h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.chapter:hover h3 {
+    color: #00d4ff;
+}
+
+.chapter p {
+    margin-bottom: 24px;
+    color: #a0a0a0;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.chapter:hover p {
+    color: #c0c0c0;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #00d4ff, #007acc);
+    color: #ffffff;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-weight: 400;
+    font-size: 0.95rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+}
+
+.notes ul {
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.notes li {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+    color: #b0b0b0;
+}
+
+.notes li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    color: #00d4ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    padding: 60px 0;
+    text-align: center;
+    color: #808080;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 300;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Subtle background pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 122, 204, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Code-like styling for monospace font */
+code, pre {
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .chapters {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .chapter {
+        padding: 30px;
+    }
+}
+
+.modern-input {
+    border: 2px solid #e0e0e0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(53, 31, 74, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 122, 204, 0.03) 0%, transparent 50%);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    width: 300px;
+    transition: all 0.3s ease;
+    outline: none; 
+    color: white;
+    
+  }
+.modern-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  }
+
+.feedbackContainer {
+    flex-direction: column;
+    gap: 15px;
+    display: flex;           
+    justify-content: center; 
+    align-items: center;  
+}
+
+
+
+  .stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .stars input {
+    display: none;
+  }
+
+  .stars label {
+    font-size: 4rem; 
+    color: lightgray;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%; 
+    padding: 0.1em; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
+  }
+
+  
+  .stars label:hover,
+  .stars label:hover ~ label {
+    color: gold;
+    transform: scale(1.1); 
+  }
+
+  .stars input:checked ~ label {
+    color: gold;
+  }
