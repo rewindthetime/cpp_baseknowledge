@@ -1,6 +1,9 @@
 #include <iostream>
 
 int main() {
+    // initialize a boolean (true / false)
+    bool amIBeautifull = true;
+    std::cout << amIBeautifull << std::endl;
 
     // Initialize a variable
     int file_size = 100;
@@ -26,5 +29,11 @@ int main() {
     std::cout << file_size << std::endl;
     std::cout << counter << std::endl;
     std::cout << sales << std::endl;
+    return 0;
+
+
+    int test {132};
+    std::cout << test << std::endl;
+
     return 0;
 }
