@@ -27,7 +27,18 @@ Everything here is a learning journey, so expect simple, clean, and commented co
 │   └── reference.png
 ├── 6_fundamental_types
 │   └── fundamental types.md
-
+├── 7_random
+│   ├── main
+│   └── main.cpp
+├── 8_functions
+│   ├── main
+│   └── main.cpp
+├── 9_if_else
+│   ├── main
+│   └── main.cpp
+└── 10_switch
+    ├── main
+    └── main.cpp
 
 ````
 ---
