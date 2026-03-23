@@ -1,5 +1,7 @@
 # My First C++ Code Experiments 🚀
 
+[My website about C++](https://rewindthetime.github.io/cpp_baseknowledge/)
+
 Welcome! This repository contains my **very first own C++ code lines**.  
 I'm exploring the basics of C++ programming, from printing text to working with variables and more.  
 Everything here is a learning journey, so expect simple, clean, and commented code.
