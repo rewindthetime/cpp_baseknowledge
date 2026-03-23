@@ -22,8 +22,11 @@ Everything here is a learning journey, so expect simple, clean, and commented co
 │   ├── main
 │   └── main.cpp
 ├── 5_cmath
-│   └── main.cpp
-└── readme.md
+│   ├── main
+│   ├── main.cpp
+│   └── reference.png
+├── 6_fundamental_types
+│   └── fundamental types.md
 
 
 ````
