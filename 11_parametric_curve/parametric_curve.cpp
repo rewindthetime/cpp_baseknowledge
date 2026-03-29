@@ -5,7 +5,7 @@
 
 int main() {
     sf::RenderWindow window(sf::VideoMode({1920, 1080}), "Pi Arm Drawing");
-    window.setFramerateLimit(150);
+    window.setFramerateLimit(200);
 
     const float PI = 3.14159265358979323846f;
     const sf::Vector2f origin(960.f, 540.f);
